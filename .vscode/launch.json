@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FoodFit 서버 실행",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/server.js",
+            "console": "integratedTerminal",
+            "env": {
+                "NODE_ENV": "development"
+            }
+        },
+        {
+            "name": "데이터베이스 설정",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/setup.js",
+            "console": "integratedTerminal"
+        }
+    ]
+} 

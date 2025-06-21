@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - FootFit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1><i class="fas fa-utensils"></i> FootFit</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link"><i class="fas fa-home"></i> 홈</a>
+                <a href="/login" class="nav-link"><i class="fas fa-sign-in-alt"></i> 로그인</a>
+                <a href="/my-info.html" class="nav-link" id="myInfoBtn" style="display: none;"><i class="fas fa-user-circle"></i> 내 정보</a>
+                <a href="#" class="nav-link" id="logoutBtn" style="display: none;"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                <a href="/register" class="nav-link active"><i class="fas fa-user-plus"></i> 회원가입</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="auth-container register-container">
+            <h2><i class="fas fa-user-plus"></i> 회원가입</h2>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="username">이름</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="user_id">아이디</label>
+                    <input type="text" id="user_id" name="user_id" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirmPassword">비밀번호 확인</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-large">
+                    <i class="fas fa-user-plus"></i> 회원가입
+                </button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 1rem;">
+                <p>이미 계정이 있으신가요? <a href="/login" style="color: #667eea; text-decoration: none;">로그인</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 FootFit. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html> 

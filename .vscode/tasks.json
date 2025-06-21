@@ -1,0 +1,67 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "npm install",
+            "type": "shell",
+            "command": "npm",
+            "args": ["install"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "환경 설정 파일 복사",
+            "type": "shell",
+            "command": "cp",
+            "args": ["env.example", ".env"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "데이터베이스 설정",
+            "type": "shell",
+            "command": "node",
+            "args": ["backend/setup.js"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "개발 서버 실행",
+            "type": "shell",
+            "command": "npm",
+            "args": ["run", "dev"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "전체 설정 및 실행",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "npm install",
+                "환경 설정 파일 복사",
+                "데이터베이스 설정",
+                "개발 서버 실행"
+            ]
+        }
+    ]
+} 

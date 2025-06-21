@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레시피 목록 - FootFit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1><i class="fas fa-utensils"></i> FootFit</h1>
+            </div>
+            <div class="nav-menu">
+                <a href="/" class="nav-link"><i class="fas fa-home"></i> 홈</a>
+                <a href="/login" class="nav-link" id="loginBtn"><i class="fas fa-sign-in-alt"></i> 로그인</a>
+                <a href="/register" class="nav-link" id="registerBtn"><i class="fas fa-user-plus"></i> 회원가입</a>
+                <a href="/my-info.html" class="nav-link" id="myInfoBtn" style="display: none;"><i class="fas fa-user-circle"></i> 내 정보</a>
+                <a href="#" class="nav-link" id="logoutBtn" style="display: none;"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="search-results">
+            <div class="results-header">
+                <h2>검색 결과</h2>
+                <div class="search-info">
+                    <p>선택된 재료: <span id="searchIngredients"></span></p>
+                    <p>총 <span id="recipeCount">0</span>개의 레시피를 찾았습니다.</p>
+                </div>
+                <a href="/" class="btn btn-primary">
+                    <i class="fas fa-arrow-left"></i> 다시 검색하기
+                </a>
+            </div>
+            
+            <div class="recipe-grid" id="recipeGrid">
+                <!-- 레시피 카드들이 여기에 동적으로 추가됩니다 -->
+            </div>
+            
+            <div class="no-results" id="noResults" style="display: none;">
+                <div style="text-align: center; padding: 3rem;">
+                    <i class="fas fa-search" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
+                    <h3>검색 결과가 없습니다</h3>
+                    <p>다른 재료를 추가하거나 다른 재료로 검색해보세요.</p>
+                    <a href="/" class="btn btn-primary">
+                        <i class="fas fa-home"></i> 홈으로 돌아가기
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 FootFit. 모든 권리 보유.</p>
+        </div>
+    </footer>
+
+    <script src="js/recipes.js"></script>
+</body>
+</html> 
